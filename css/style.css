@@ -2,7 +2,7 @@
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url("http://fonts.gstatic.com/s/lato/v11/8qcEw_nrk_5HEcCpYdJu8BTbgVql8nDJpwnrE27mub0.woff2") format('woff2');
+  src: local('Lato Regular'), local('Lato-Regular'), url("../fonts/Lato-Regular.ttf") format('truetype');
 }
 
 @font-face {
