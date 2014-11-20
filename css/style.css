@@ -91,12 +91,15 @@ textarea {
 
 .wrapper {
 	width: 70%;
-	margin:auto;
+	margin: 50px auto;
 	background: rgba(255,255,255,0.2);
 	color: #ffffff;
 	padding: 20px;
-	text-align: justify;
 	border-top: solid 7px #009ed5;
+}
+
+.wrapper:not(.formulaire-contact) {
+	text-align: justify;
 }
 
 .wrapper a {
