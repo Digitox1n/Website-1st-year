@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url("http://fonts.googleapis.com/css?family=Lato") format('woff2');
+}  
+
+@font-face {
+	font-family:'Helvetica Neue';
+	src:url('../fonts/HelveticaNeue-Light.ttf') format('truetype');
+}
+
+body {
+	margin: 0;
+	font-family: "Helvetica Neue", sans-serif;
+	background: url("../img/BG.png");
+	background-attachment: fixed;
+	background-size: contain;
+}
+
+header {
+	position: relative;
+	height: 100px;
+	padding: 10px;
+}
+
+input[type="text"] {
+	background: none;
+	border: solid 1px;
+	color: white;
+	border-radius:10px;
+	padding:5px;
+	outline: none;
+}
+
+button {
+	margin-top: 10px;
+	border: 2px solid #009ed5;
+	border-radius: 5px;
+	background: none;
+	cursor: pointer;
+	outline: none;
+}
+
+button:hover,
+button:focus {
+  outline   : none;
+  background: #009ed5;
+  color   : #fff;
+}
+
+textarea {
+	margin-top: 10px;
+	outline: none;
+	border: solid 1px white;
+	background: none;
+	color: white;
+	padding: 5px;
+	width: 240px;
+	height: 100px;
+}
+
+.formulaire-contact {
+	text-align: center;
+}
+
+.navbar {
+	position: absolute;
+	top: 70px;
+	right: 50px;
+  	font-family:"Lato";
+  	font-size: 0.85em;
+}
+
+.navbar a:not(.active) {
+	opacity: 0.65;
+}
+
+.navbar a:hover {
+	opacity: 1;
+}
+
+.logo {
+}
+
+.navbar a {
+	padding: 10px;
+	text-decoration: none;
+  	color: #fff;
+}
+
+.wrapper {
+	width: 70%;
+	margin:auto;
+	background: rgba(255,255,255,0.2);
+	color: #ffffff;
+	padding: 20px;
+	text-align: justify;
+	border-top: solid 7px #009ed5;
+}
+
+.wrapper a {
+	color: white;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background: white;
+	width: 60%;
+}
+
+footer {
+	position: absolute;
+	bottom: 5px;
+	height: auto;
+	font-weight: 300;
+	font-size: 0.9em;
+	color: black;
+	margin-left: 10px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select:none;
+	cursor: default;
+}
