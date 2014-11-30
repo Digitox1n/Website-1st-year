@@ -2,20 +2,12 @@
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url("../fonts/Lato-Regular.ttf") format('truetype');
+  src: local('Lato Regular'), local('Lato-Regular'), url("fonts/Lato-Regular.ttf") format('truetype');
 }
 
 @font-face {
 	font-family:'Helvetica Neue';
 	src:url('../fonts/HelveticaNeue-Light.ttf') format('truetype');
-}
-
-body {
-	margin: 0;
-	font-family: "Helvetica Neue", sans-serif;
-	background: url("../img/BG.png");
-	background-attachment: fixed;
-	background-size: contain;
 }
 
 header {
@@ -33,6 +25,14 @@ header {
   	font-family:'Lato';
   	font-size: 0.85em;
   	text-transform: uppercase;
+}
+
+body {
+	margin: 0;
+	font-family: "Helvetica Neue", sans-serif;
+	background: url("../img/BG.png");
+	background-attachment: fixed;
+	background-size: contain;
 }
 
 .navbar a:not(.active) {
