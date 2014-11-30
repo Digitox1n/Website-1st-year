@@ -146,8 +146,5 @@ footer {
 	min-height: 10px;
 	color: black;
 	margin-left: 10px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select:none;
 	cursor: default;
 }
