@@ -115,6 +115,7 @@ textarea {
 .youtube {
 	margin:auto;
 	display:block;
+	border:none;
 }
 
 .wrapper:not(.formulaire-contact) {
