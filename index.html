@@ -3,10 +3,14 @@
 <head>
 	<title>Guillaume Aguiraud</title>
 	<meta charset="utf-8"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<meta name="description" content="Page personnelle de Guillaume Aguiraud"/>
+	<meta name="keywords" content="Guillaume,Aguiraud,présentation,informatique,DUT"/>
+	<link rel="stylesheet" type="text/css" title="original"href="css/style.css"/>
 	<link rel="shortcut icon" href="favicon.ico"/>
+	<link rel="alternate stylesheet" type="text/css" title="modified" href="css/stylealternate.css"/>
+	<link rel="javascript" type="text/javascript" href="js/stylechanger.js">
 </head>
-<body>
+<body onload="set_style_from_cookie()">
 	<!-- Navigation -->
 	<header>
 		<div class="logo">
@@ -15,15 +19,18 @@
 			</a>
 		</div>
 		<div class="navbar" role="navigation">
-				<a href="" class="active">accueil</a>
-				<a href="cv.html">mon cv</a>
-				<a href="contact.html">contact</a>
-				<a href="downloads.html">téléchargements</a>
+			<a href="" class="active">accueil</a>
+			<a href="cv.html">mon cv</a>
+			<a href="contact.html">contact</a>
+			<a href="downloads.html">téléchargements</a>
 		</div>
 	</header>
 	<!-- Contenu -->
 
 	<div class="wrapper">
+		<form>
+		<input type="submit" onclick="switch_style('modified');return false;" name="theme" value="Thème modifié" id="modified">
+		</form>
 		<h2>Bienvenue sur mon site</h2>
 		<p>
 			<strong>
