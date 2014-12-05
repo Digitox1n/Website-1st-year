@@ -1,54 +1,26 @@
-var style_cookie_name = "style" ;
-var style_cookie_duration = 30 ;
+function setStyle(value) {
+  document.getElementById('css').href = ('css/' + value);
 
-function switch_style ( css_title )
-{
-// You may use this script on your site free of charge provided
-// you do not remove this notice or the URL below. Script from
-// http://www.thesitewizard.com/javascripts/change-style-sheets.shtml
-  var i, link_tag ;
-  for (i = 0, link_tag = document.getElementsByTagName("link") ;
-    i < link_tag.length ; i++ ) {
-    if ((link_tag[i].rel.indexOf( "stylesheet" ) != -1) &&
-      link_tag[i].title) {
-      link_tag[i].disabled = true ;
-      if (link_tag[i].title == css_title) {
-        link_tag[i].disabled = false ;
-      }
-    }
-    set_cookie( style_cookie_name, css_title,
-      style_cookie_duration );
+  var expiration = new Date();
+  expiration.setTime(expiration.getTime() + 3600000);
+  document.cookie = "style=" + value + "; expires=" + expiration.toGMTString();
+}
+
+function getStyleCookie() {
+  var cookieArray = document.cookie.split(';');
+  for( var i = 0; cookieArray.length > i; ++i ){
+  var cookieStr = cookieArray[i];
+  var nameplace = cookieStr.indexOf("style=");
+  if( nameplace != -1)
+    return cookieStr.substring((nameplace + 6), cookieStr.length);
   }
+  return "";
 }
-function set_style_from_cookie()
-{
-  var css_title = get_cookie( style_cookie_name );
-  if (css_title.length) {
-    switch_style( css_title );
+
+function readStyleCookie() {
+  var style = getStyleCookie();
+  if( style != "" ) {
+    document.getElementById('css').href = ('css/' + style);
+    document.getElementById(style).selected = true;
   }
-}
-function set_cookie ( cookie_name, cookie_value,
-    lifespan_in_days, valid_domain )
-{
-    // http://www.thesitewizard.com/javascripts/cookies.shtml
-    var domain_string = valid_domain ?
-                       ("; domain=" + valid_domain) : '' ;
-    document.cookie = cookie_name +
-                       "=" + encodeURIComponent( cookie_value ) +
-                       "; max-age=" + 60 * 60 *
-                       24 * lifespan_in_days +
-                       "; path=/" + domain_string ;
-}
-function get_cookie ( cookie_name )
-{
-    // http://www.thesitewizard.com/javascripts/cookies.shtml
-    var cookie_string = document.cookie ;
-    if (cookie_string.length != 0) {
-        var cookie_value = cookie_string.match (
-                        '(^|;)[\s]*' +
-                        cookie_name +
-                        '=([^;]*)' );
-        return decodeURIComponent ( cookie_value[2] ) ;
-    }
-    return '' ;
 }
