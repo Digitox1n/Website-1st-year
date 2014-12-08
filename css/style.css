@@ -66,6 +66,8 @@ a:hover {
 	color: #000;
 	padding: 20px;
 	border-top: solid 7px #009ed5;
+	font-weight: 300;
+    line-height: 1.4;
 }
 
 input[type="text"] {
