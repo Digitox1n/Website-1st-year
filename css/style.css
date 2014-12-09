@@ -70,6 +70,12 @@ a:hover {
     line-height: 1.4;
 }
 
+.img-profil {
+	float: right;
+	margin-left: 20px;
+	border-radius: 7px;
+}
+
 input[type="text"] {
 	background: none;
 	border: solid 1px;
